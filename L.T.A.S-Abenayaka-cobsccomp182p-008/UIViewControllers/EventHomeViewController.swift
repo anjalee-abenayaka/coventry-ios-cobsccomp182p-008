@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  EventHomeViewController.swift
 //  L.T.A.S-Abenayaka-cobsccomp182p-008
 //
 //  Created by Anjalee on 2/20/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class EventHomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

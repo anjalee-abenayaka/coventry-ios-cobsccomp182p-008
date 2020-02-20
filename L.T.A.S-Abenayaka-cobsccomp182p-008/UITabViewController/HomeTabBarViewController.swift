@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  HomeTabBarViewController.swift
 //  L.T.A.S-Abenayaka-cobsccomp182p-008
 //
 //  Created by Anjalee on 2/20/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class HomeTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
