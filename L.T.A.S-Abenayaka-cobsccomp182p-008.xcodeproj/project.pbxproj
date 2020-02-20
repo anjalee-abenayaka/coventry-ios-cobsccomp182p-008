@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -155,7 +155,6 @@
 				64332E83D6A0B5187BDA1BEF /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.debug.xcconfig */,
 				5E393EC38B1E9B8EE053CC11 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
