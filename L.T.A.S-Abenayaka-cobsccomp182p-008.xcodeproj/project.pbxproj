@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21147B9558F117C0F2C73D19 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008_L_T_A_S_Abenayaka_cobsccomp182p_008UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E31D02FD1992BD54D19BDDDA /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008_L_T_A_S_Abenayaka_cobsccomp182p_008UITests.framework */; };
+		27F1D70CB74A86C633DCD0B3 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA6F2C0E93E8265B7DC47F4 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008Tests.framework */; };
 		3C55583623FE4F61005530B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55583523FE4F61005530B2 /* AppDelegate.swift */; };
 		3C55583823FE4F61005530B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55583723FE4F61005530B2 /* ViewController.swift */; };
 		3C55583B23FE4F61005530B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C55583923FE4F61005530B2 /* Main.storyboard */; };
@@ -14,6 +16,8 @@
 		3C55584023FE4F62005530B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C55583E23FE4F62005530B2 /* LaunchScreen.storyboard */; };
 		3C55584B23FE4F62005530B2 /* L_T_A_S_Abenayaka_cobsccomp182p_008Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55584A23FE4F62005530B2 /* L_T_A_S_Abenayaka_cobsccomp182p_008Tests.swift */; };
 		3C55585623FE4F62005530B2 /* L_T_A_S_Abenayaka_cobsccomp182p_008UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55585523FE4F62005530B2 /* L_T_A_S_Abenayaka_cobsccomp182p_008UITests.swift */; };
+		3C55586423FE525F005530B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C55586323FE525F005530B2 /* GoogleService-Info.plist */; };
+		DA650504DC84E4F6B6A3328A /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36094B7008D176B4074A2E93 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FA6F2C0E93E8265B7DC47F4 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_L_T_A_S_Abenayaka_cobsccomp182p_008Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36094B7008D176B4074A2E93 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_L_T_A_S_Abenayaka_cobsccomp182p_008.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		376470F17BDC4C730E6E5A0A /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.release.xcconfig"; path = "Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.release.xcconfig"; sourceTree = "<group>"; };
 		3C55583223FE4F61005530B2 /* L.T.A.S-Abenayaka-cobsccomp182p-008.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "L.T.A.S-Abenayaka-cobsccomp182p-008.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C55583523FE4F61005530B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C55583723FE4F61005530B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +54,13 @@
 		3C55585123FE4F62005530B2 /* L.T.A.S-Abenayaka-cobsccomp182p-008UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "L.T.A.S-Abenayaka-cobsccomp182p-008UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C55585523FE4F62005530B2 /* L_T_A_S_Abenayaka_cobsccomp182p_008UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L_T_A_S_Abenayaka_cobsccomp182p_008UITests.swift; sourceTree = "<group>"; };
 		3C55585723FE4F62005530B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C55586323FE525F005530B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5E393EC38B1E9B8EE053CC11 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.release.xcconfig"; path = "Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.release.xcconfig"; sourceTree = "<group>"; };
+		64332E83D6A0B5187BDA1BEF /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.debug.xcconfig"; path = "Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		671C6600BC33410FC067B800 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests.release.xcconfig"; path = "Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests.release.xcconfig"; sourceTree = "<group>"; };
+		78AE8EEB6E1D1684F3FFD784 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.debug.xcconfig"; path = "Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.debug.xcconfig"; sourceTree = "<group>"; };
+		E31D02FD1992BD54D19BDDDA /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008_L_T_A_S_Abenayaka_cobsccomp182p_008UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_L_T_A_S_Abenayaka_cobsccomp182p_008_L_T_A_S_Abenayaka_cobsccomp182p_008UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE88000837252D2438089134 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests.debug.xcconfig"; path = "Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA650504DC84E4F6B6A3328A /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F1D70CB74A86C633DCD0B3 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21147B9558F117C0F2C73D19 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008_L_T_A_S_Abenayaka_cobsccomp182p_008UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +98,8 @@
 				3C55584923FE4F62005530B2 /* L.T.A.S-Abenayaka-cobsccomp182p-008Tests */,
 				3C55585423FE4F62005530B2 /* L.T.A.S-Abenayaka-cobsccomp182p-008UITests */,
 				3C55583323FE4F61005530B2 /* Products */,
+				D107916F28E58E80D5A08013 /* Pods */,
+				DEA8043EFE03DC435DD7BABE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +116,7 @@
 		3C55583423FE4F61005530B2 /* L.T.A.S-Abenayaka-cobsccomp182p-008 */ = {
 			isa = PBXGroup;
 			children = (
+				3C55586323FE525F005530B2 /* GoogleService-Info.plist */,
 				3C55583523FE4F61005530B2 /* AppDelegate.swift */,
 				3C55583723FE4F61005530B2 /* ViewController.swift */,
 				3C55583923FE4F61005530B2 /* Main.storyboard */,
@@ -125,6 +145,30 @@
 			path = "L.T.A.S-Abenayaka-cobsccomp182p-008UITests";
 			sourceTree = "<group>";
 		};
+		D107916F28E58E80D5A08013 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78AE8EEB6E1D1684F3FFD784 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.debug.xcconfig */,
+				376470F17BDC4C730E6E5A0A /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.release.xcconfig */,
+				EE88000837252D2438089134 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests.debug.xcconfig */,
+				671C6600BC33410FC067B800 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests.release.xcconfig */,
+				64332E83D6A0B5187BDA1BEF /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.debug.xcconfig */,
+				5E393EC38B1E9B8EE053CC11 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DEA8043EFE03DC435DD7BABE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36094B7008D176B4074A2E93 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008.framework */,
+				E31D02FD1992BD54D19BDDDA /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008_L_T_A_S_Abenayaka_cobsccomp182p_008UITests.framework */,
+				1FA6F2C0E93E8265B7DC47F4 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C55585A23FE4F62005530B2 /* Build configuration list for PBXNativeTarget "L.T.A.S-Abenayaka-cobsccomp182p-008" */;
 			buildPhases = (
+				FA8D40B63782BE8D404E91A4 /* [CP] Check Pods Manifest.lock */,
 				3C55582E23FE4F61005530B2 /* Sources */,
 				3C55582F23FE4F61005530B2 /* Frameworks */,
 				3C55583023FE4F61005530B2 /* Resources */,
+				76322F698A52178887B5552E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C55585D23FE4F62005530B2 /* Build configuration list for PBXNativeTarget "L.T.A.S-Abenayaka-cobsccomp182p-008Tests" */;
 			buildPhases = (
+				B798E2EBFA8D22C6E79BEC62 /* [CP] Check Pods Manifest.lock */,
 				3C55584223FE4F62005530B2 /* Sources */,
 				3C55584323FE4F62005530B2 /* Frameworks */,
 				3C55584423FE4F62005530B2 /* Resources */,
@@ -167,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C55586023FE4F62005530B2 /* Build configuration list for PBXNativeTarget "L.T.A.S-Abenayaka-cobsccomp182p-008UITests" */;
 			buildPhases = (
+				F98266E3C825F93699980F5D /* [CP] Check Pods Manifest.lock */,
 				3C55584D23FE4F62005530B2 /* Sources */,
 				3C55584E23FE4F62005530B2 /* Frameworks */,
 				3C55584F23FE4F62005530B2 /* Resources */,
+				3F3160FDC43AFEC17981F580 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C55584023FE4F62005530B2 /* LaunchScreen.storyboard in Resources */,
+				3C55586423FE525F005530B2 /* GoogleService-Info.plist in Resources */,
 				3C55583D23FE4F62005530B2 /* Assets.xcassets in Resources */,
 				3C55583B23FE4F61005530B2 /* Main.storyboard in Resources */,
 			);
@@ -250,6 +300,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F3160FDC43AFEC17981F580 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76322F698A52178887B5552E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B798E2EBFA8D22C6E79BEC62 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F98266E3C825F93699980F5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA8D40B63782BE8D404E91A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C55582E23FE4F61005530B2 /* Sources */ = {
@@ -430,6 +583,7 @@
 		};
 		3C55585B23FE4F62005530B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78AE8EEB6E1D1684F3FFD784 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -448,6 +602,7 @@
 		};
 		3C55585C23FE4F62005530B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 376470F17BDC4C730E6E5A0A /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -466,6 +621,7 @@
 		};
 		3C55585E23FE4F62005530B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64332E83D6A0B5187BDA1BEF /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +643,7 @@
 		};
 		3C55585F23FE4F62005530B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E393EC38B1E9B8EE053CC11 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +665,7 @@
 		};
 		3C55586123FE4F62005530B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE88000837252D2438089134 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +686,7 @@
 		};
 		3C55586223FE4F62005530B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 671C6600BC33410FC067B800 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

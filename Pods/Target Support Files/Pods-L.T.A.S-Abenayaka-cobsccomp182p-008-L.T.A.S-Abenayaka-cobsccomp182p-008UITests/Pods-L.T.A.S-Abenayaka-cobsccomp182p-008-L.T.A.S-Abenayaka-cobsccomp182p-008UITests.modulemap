@@ -1,0 +1,6 @@
+framework module Pods_L_T_A_S_Abenayaka_cobsccomp182p_008_L_T_A_S_Abenayaka_cobsccomp182p_008UITests {
+  umbrella header "Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
