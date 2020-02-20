@@ -9,9 +9,12 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseFirestore
+import FirebaseStorage
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
 
+    @IBOutlet weak var imgProfilePicture: UIImageView!
     @IBOutlet weak var txtFname: UITextField!
     @IBOutlet weak var txtLname: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
@@ -21,10 +24,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var txtDepartment: UITextField!
     @IBOutlet weak var BtnSignUp: UIButton!
     @IBOutlet weak var lblError: UILabel!
+    var ImageSelect: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
          setUpElements()
+        uploadProfilePic()
         // Do any additional setup after loading the view.
     }
     
@@ -115,6 +120,16 @@ class SignUpViewController: UIViewController {
                     
                     // User was created successfully, now store the first name and last name
                     let db = Firestore.firestore()
+                    let storageRef = Storage.storage().reference(forURL: "gs://ios-course-work.appspot.com").child("profile_image").child(result!.user.uid)
+                    if let imgProfilePicture = self.ImageSelect, let imageData = imgProfilePicture.jpegData(compressionQuality: 0.1){
+                        storageRef.putData(imageData, metadata: nil, completion: { (metadata, error ) in
+                            if error != nil{
+                               // alert.showAlert(title: "Error", message: "Image Upload Error Please Re-check", buttonText: "Okay")
+                                self.showError("Image Upload Error, Try Again")
+                            }
+                            
+                        })
+                    }
                     
                     db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "department":department, "mobile":mobile, "uid": result!.user.uid ]) { (error) in
                         
@@ -138,11 +153,39 @@ class SignUpViewController: UIViewController {
     
     func transitionToHome() {
         
-        let homeViewController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? EventHomeViewController
+        let homeTabViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeTabViewController) as? HomeTabBarViewController
         
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
+        self.view.window?.rootViewController = homeTabViewController
+        self.view.window?.makeKeyAndVisible()
         
+    }
+    
+    func uploadProfilePic(){
+        
+        imgProfilePicture.layer.cornerRadius = 10
+        imgProfilePicture.clipsToBounds = true
+        
+        let tapGuesture = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.handleSelectProfileImageView))
+        imgProfilePicture.addGestureRecognizer(tapGuesture)
+        imgProfilePicture.isUserInteractionEnabled = true
+    }
+    
+    @objc func handleSelectProfileImageView(){
+        let pickerController = UIImagePickerController()
+        pickerController.delegate = self
+        present(pickerController, animated: true, completion: nil)
+    }
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[.originalImage] as? UIImage {
+            ImageSelect = image
+            imgProfilePicture.image = image
+        }
+        print(info)
+        
+        dismiss(animated: true, completion: nil)
     }
     
 }

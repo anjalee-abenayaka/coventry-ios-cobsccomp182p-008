@@ -54,9 +54,10 @@ setUpElements()
             }
             else {
                 
-                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? EventHomeViewController
+              //  let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? EventHomeViewController
+                let homeTabViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeTabViewController) as? HomeTabBarViewController
                 
-                self.view.window?.rootViewController = homeViewController
+                self.view.window?.rootViewController = homeTabViewController
                self.view.window?.makeKeyAndVisible()
                 
             }
