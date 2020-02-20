@@ -10,13 +10,15 @@
 		21147B9558F117C0F2C73D19 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008_L_T_A_S_Abenayaka_cobsccomp182p_008UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E31D02FD1992BD54D19BDDDA /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008_L_T_A_S_Abenayaka_cobsccomp182p_008UITests.framework */; };
 		27F1D70CB74A86C633DCD0B3 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA6F2C0E93E8265B7DC47F4 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008Tests.framework */; };
 		3C55583623FE4F61005530B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55583523FE4F61005530B2 /* AppDelegate.swift */; };
-		3C55583823FE4F61005530B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55583723FE4F61005530B2 /* ViewController.swift */; };
+		3C55583823FE4F61005530B2 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55583723FE4F61005530B2 /* LandingViewController.swift */; };
 		3C55583B23FE4F61005530B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C55583923FE4F61005530B2 /* Main.storyboard */; };
 		3C55583D23FE4F62005530B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C55583C23FE4F62005530B2 /* Assets.xcassets */; };
 		3C55584023FE4F62005530B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C55583E23FE4F62005530B2 /* LaunchScreen.storyboard */; };
 		3C55584B23FE4F62005530B2 /* L_T_A_S_Abenayaka_cobsccomp182p_008Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55584A23FE4F62005530B2 /* L_T_A_S_Abenayaka_cobsccomp182p_008Tests.swift */; };
 		3C55585623FE4F62005530B2 /* L_T_A_S_Abenayaka_cobsccomp182p_008UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55585523FE4F62005530B2 /* L_T_A_S_Abenayaka_cobsccomp182p_008UITests.swift */; };
 		3C55586423FE525F005530B2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C55586323FE525F005530B2 /* GoogleService-Info.plist */; };
+		3C55586723FE6A2D005530B2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55586623FE6A2D005530B2 /* SignUpViewController.swift */; };
+		3C55586923FE6A42005530B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55586823FE6A42005530B2 /* LoginViewController.swift */; };
 		DA650504DC84E4F6B6A3328A /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36094B7008D176B4074A2E93 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +45,7 @@
 		376470F17BDC4C730E6E5A0A /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.release.xcconfig"; path = "Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.release.xcconfig"; sourceTree = "<group>"; };
 		3C55583223FE4F61005530B2 /* L.T.A.S-Abenayaka-cobsccomp182p-008.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "L.T.A.S-Abenayaka-cobsccomp182p-008.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C55583523FE4F61005530B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C55583723FE4F61005530B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3C55583723FE4F61005530B2 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		3C55583A23FE4F61005530B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C55583C23FE4F62005530B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C55583F23FE4F62005530B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +57,8 @@
 		3C55585523FE4F62005530B2 /* L_T_A_S_Abenayaka_cobsccomp182p_008UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L_T_A_S_Abenayaka_cobsccomp182p_008UITests.swift; sourceTree = "<group>"; };
 		3C55585723FE4F62005530B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C55586323FE525F005530B2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3C55586623FE6A2D005530B2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		3C55586823FE6A42005530B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5E393EC38B1E9B8EE053CC11 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.release.xcconfig"; path = "Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.release.xcconfig"; sourceTree = "<group>"; };
 		64332E83D6A0B5187BDA1BEF /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.debug.xcconfig"; path = "Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		671C6600BC33410FC067B800 /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests.release.xcconfig"; path = "Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008-L.T.A.S-Abenayaka-cobsccomp182p-008UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,9 +120,9 @@
 		3C55583423FE4F61005530B2 /* L.T.A.S-Abenayaka-cobsccomp182p-008 */ = {
 			isa = PBXGroup;
 			children = (
+				3C55586523FE69D5005530B2 /* UIView Controllers */,
 				3C55586323FE525F005530B2 /* GoogleService-Info.plist */,
 				3C55583523FE4F61005530B2 /* AppDelegate.swift */,
-				3C55583723FE4F61005530B2 /* ViewController.swift */,
 				3C55583923FE4F61005530B2 /* Main.storyboard */,
 				3C55583C23FE4F62005530B2 /* Assets.xcassets */,
 				3C55583E23FE4F62005530B2 /* LaunchScreen.storyboard */,
@@ -143,6 +147,16 @@
 				3C55585723FE4F62005530B2 /* Info.plist */,
 			);
 			path = "L.T.A.S-Abenayaka-cobsccomp182p-008UITests";
+			sourceTree = "<group>";
+		};
+		3C55586523FE69D5005530B2 /* UIView Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3C55583723FE4F61005530B2 /* LandingViewController.swift */,
+				3C55586623FE6A2D005530B2 /* SignUpViewController.swift */,
+				3C55586823FE6A42005530B2 /* LoginViewController.swift */,
+			);
+			path = "UIView Controllers";
 			sourceTree = "<group>";
 		};
 		D107916F28E58E80D5A08013 /* Pods */ = {
@@ -408,7 +422,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C55583823FE4F61005530B2 /* ViewController.swift in Sources */,
+				3C55586923FE6A42005530B2 /* LoginViewController.swift in Sources */,
+				3C55586723FE6A2D005530B2 /* SignUpViewController.swift in Sources */,
+				3C55583823FE4F61005530B2 /* LandingViewController.swift in Sources */,
 				3C55583623FE4F61005530B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
