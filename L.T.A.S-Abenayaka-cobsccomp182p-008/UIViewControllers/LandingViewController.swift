@@ -10,11 +10,16 @@ import UIKit
 
 class LandingViewController: UIViewController {
 
+    @IBOutlet weak var BtnSignUp: UIButton!
+    @IBOutlet weak var BtnLogin: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setUpElements()
     }
-
+    func setUpElements(){
+        Utilities.styleFilledButton(BtnSignUp)
+        Utilities.styleFilledButton(BtnLogin)
+    }
 
 }
 

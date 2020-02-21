@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		21147B9558F117C0F2C73D19 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008_L_T_A_S_Abenayaka_cobsccomp182p_008UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E31D02FD1992BD54D19BDDDA /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008_L_T_A_S_Abenayaka_cobsccomp182p_008UITests.framework */; };
 		27F1D70CB74A86C633DCD0B3 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FA6F2C0E93E8265B7DC47F4 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008Tests.framework */; };
+		3C09A03223FFBDF100C55AFA /* TouchFaceIdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C09A03123FFBDF100C55AFA /* TouchFaceIdViewController.swift */; };
+		3C09A03423FFBE0300C55AFA /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C09A03323FFBE0300C55AFA /* MyProfileViewController.swift */; };
+		3C09A03623FFC20A00C55AFA /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C09A03523FFC20A00C55AFA /* AlertMessage.swift */; };
 		3C55583623FE4F61005530B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55583523FE4F61005530B2 /* AppDelegate.swift */; };
 		3C55583823FE4F61005530B2 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55583723FE4F61005530B2 /* LandingViewController.swift */; };
 		3C55583B23FE4F61005530B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C55583923FE4F61005530B2 /* Main.storyboard */; };
@@ -47,6 +50,9 @@
 		1FA6F2C0E93E8265B7DC47F4 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_L_T_A_S_Abenayaka_cobsccomp182p_008Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36094B7008D176B4074A2E93 /* Pods_L_T_A_S_Abenayaka_cobsccomp182p_008.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_L_T_A_S_Abenayaka_cobsccomp182p_008.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		376470F17BDC4C730E6E5A0A /* Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.release.xcconfig"; path = "Target Support Files/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008/Pods-L.T.A.S-Abenayaka-cobsccomp182p-008.release.xcconfig"; sourceTree = "<group>"; };
+		3C09A03123FFBDF100C55AFA /* TouchFaceIdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchFaceIdViewController.swift; sourceTree = "<group>"; };
+		3C09A03323FFBE0300C55AFA /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		3C09A03523FFC20A00C55AFA /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
 		3C55583223FE4F61005530B2 /* L.T.A.S-Abenayaka-cobsccomp182p-008.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "L.T.A.S-Abenayaka-cobsccomp182p-008.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C55583523FE4F61005530B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C55583723FE4F61005530B2 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +172,8 @@
 				3C55586623FE6A2D005530B2 /* SignUpViewController.swift */,
 				3C55586823FE6A42005530B2 /* LoginViewController.swift */,
 				3C55587223FE79D5005530B2 /* EventHomeViewController.swift */,
+				3C09A03123FFBDF100C55AFA /* TouchFaceIdViewController.swift */,
+				3C09A03323FFBE0300C55AFA /* MyProfileViewController.swift */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +191,7 @@
 			children = (
 				3C55586E23FE6B74005530B2 /* Utilities.swift */,
 				3C55587023FE6B99005530B2 /* Constants.swift */,
+				3C09A03523FFC20A00C55AFA /* AlertMessage.swift */,
 			);
 			path = HelperFiles;
 			sourceTree = "<group>";
@@ -450,8 +459,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C09A03423FFBE0300C55AFA /* MyProfileViewController.swift in Sources */,
+				3C09A03223FFBDF100C55AFA /* TouchFaceIdViewController.swift in Sources */,
 				3C55586F23FE6B74005530B2 /* Utilities.swift in Sources */,
 				3C55586923FE6A42005530B2 /* LoginViewController.swift in Sources */,
+				3C09A03623FFC20A00C55AFA /* AlertMessage.swift in Sources */,
 				3C55587323FE79D5005530B2 /* EventHomeViewController.swift in Sources */,
 				3C55586723FE6A2D005530B2 /* SignUpViewController.swift in Sources */,
 				3C55583823FE4F61005530B2 /* LandingViewController.swift in Sources */,
