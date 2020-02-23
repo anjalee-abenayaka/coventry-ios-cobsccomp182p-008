@@ -24,7 +24,7 @@ class SignUpViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     @IBOutlet weak var txtDepartment: UITextField!
     @IBOutlet weak var BtnSignUp: UIButton!
     @IBOutlet weak var lblError: UILabel!
-    var ImageSelect: UIImage?
+    var selectedImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,42 +120,48 @@ class SignUpViewController: UIViewController,UIImagePickerControllerDelegate,UIN
                     
                     // User was created successfully, now store the first name and last name
                     let db = Firestore.firestore()
+                //    let imageName = NSUUID().uuidString
                     let storageRef = Storage.storage().reference(forURL: "gs://ios-course-work.appspot.com").child("profile_image").child(result!.user.uid)
-                    if let imgProfilePicture = self.ImageSelect, let imageData = imgProfilePicture.jpegData(compressionQuality: 0.1){
+                    if let imgProfilePicture = self.selectedImage, let imageData = imgProfilePicture.jpegData(compressionQuality: 0.1){
                         storageRef.putData(imageData, metadata: nil, completion: { (metadata, error ) in
                             if error != nil{
                                // alert.showAlert(title: "Error", message: "Image Upload Error Please Re-check", buttonText: "Okay")
                                 self.showError("Image Upload Error, Try Again")
                             }
-                            
+                           
                         })
+
                     }
                     
-                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "department":department, "mobile":mobile, "uid": result!.user.uid ]) { (error) in
+                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "department":department, "mobile":mobile, "email":email, "password":password, "uid": result!.user.uid ]) { (error) in
                         
                         if error != nil {
                             // Show error message
+                          
                             self.showError("Error saving user data")
+                        }else{
+                              self.clearFields()
+                            
                         }
                     }
                     
                     // Transition to the home screen
-                    self.transitionToHome()
+                    self.transitionToLogin()
                 }
                 
             }
             
-            
+        }
             
         }
 
-    }
     
-    func transitionToHome() {
+    
+    func transitionToLogin() {
         
-        let homeTabViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeTabViewController) as? HomeTabBarViewController
+        let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.loginViewController) as? LoginViewController
         
-        self.view.window?.rootViewController = homeTabViewController
+        self.view.window?.rootViewController = loginViewController
         self.view.window?.makeKeyAndVisible()
         
     }
@@ -176,16 +182,28 @@ class SignUpViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         present(pickerController, animated: true, completion: nil)
     }
     
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        if let image = info[.originalImage] as? UIImage {
-            ImageSelect = image
-            imgProfilePicture.image = image
-        }
-        print(info)
-        
-        dismiss(animated: true, completion: nil)
+    func clearFields()  {
+        txtFname.text = ""
+        txtLname.text = ""
+        txtPassword.text = ""
+        txtEmail.text = ""
+        txtMobile.text = ""
+        txtDepartment.text = ""
+        txtConfirmPass.text = ""
     }
-    
 }
+extension SignUpViewController{
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            
+            if let image = info[.originalImage] as? UIImage {
+                selectedImage = image
+                imgProfilePicture.image = image
+            }
+            print(info)
+            
+            dismiss(animated: true, completion: nil)
+        }
+    }
+
+
