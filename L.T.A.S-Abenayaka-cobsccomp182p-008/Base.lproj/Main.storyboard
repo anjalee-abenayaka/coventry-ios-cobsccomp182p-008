@@ -24,7 +24,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q67-c0-lr8">
                                         <rect key="frame" x="1" y="1" width="414" height="850"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NIBM" translatesAutoresizingMaskIntoConstraints="NO" id="etS-gw-wIw">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NIBM Event" translatesAutoresizingMaskIntoConstraints="NO" id="etS-gw-wIw">
                                                 <rect key="frame" x="87" y="51" width="232" height="194"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -750,7 +750,7 @@
     </scenes>
     <resources>
         <image name="Face id" width="512" height="303"/>
-        <image name="NIBM" width="1024" height="768"/>
+        <image name="NIBM Event" width="1024" height="768"/>
         <image name="add event icon" width="30" height="30"/>
         <image name="home-icon" width="30" height="30"/>
         <image name="login" width="64" height="64"/>
@@ -759,6 +759,6 @@
         <image name="user profile" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nOC-74-6fP"/>
+        <segue reference="w3H-c3-1Dh"/>
     </inferredMetricsTieBreakers>
 </document>
