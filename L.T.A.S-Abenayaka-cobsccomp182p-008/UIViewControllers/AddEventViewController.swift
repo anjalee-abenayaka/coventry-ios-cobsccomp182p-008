@@ -41,6 +41,9 @@ class AddEventViewController: UIViewController{
         self.ref = Database.database().reference()
         EventImage.isUserInteractionEnabled = true
         setUpElements()
+        
+        self.EventImage.layer.borderColor = UIColor.lightGray.cgColor
+        self.EventImage.layer.borderWidth = 1
       
     }
     
@@ -110,7 +113,6 @@ class AddEventViewController: UIViewController{
         }
         self.saveFIRData()
         navigationController?.popViewController(animated: true)
-        
         alert.showAlert(title: "Event", message: "Event added successfully:",buttonText: "Event Home")
         
         let homeTabViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeTabViewController) as? HomeTabBarViewController

@@ -93,13 +93,13 @@ extension EventHomeViewController: UITableViewDataSource, UITableViewDelegate{
         performSegue(withIdentifier: "eventDetail", sender: eventList[indexPath.row])
     }
     
-  /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "eventDetail" {
             if let viewController = segue.destination as? PostedEventViewController{
                 
                 viewController.posts = sender as? EventModel
             }
         }
-    }*/
+    }
 }
 
