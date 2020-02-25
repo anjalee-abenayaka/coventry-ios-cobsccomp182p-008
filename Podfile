@@ -12,6 +12,8 @@ pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
+pod 'SwiftyJSON'
+pod 'Nuke', '~> 7.0'
 
 
   target 'L.T.A.S-Abenayaka-cobsccomp182p-008Tests' do

@@ -8,17 +8,20 @@
 
 class EventModel {
     
-    var id: String?
+    
     var event_title: String?
     var description: String?
     var summery: String?
     var location: String?
+    var imageUrl: String?
     
-    init(id: String?, event_title: String?, description: String?, summery: String?, location: String?){
-        self.id = id
+    init(event_title: String?, description: String?, summery: String?, location: String?, imageUrl: String?){
+        
+        //self.id = id
         self.event_title = event_title
         self.description = description
         self.summery = summery
         self.location = location
+        self.imageUrl = imageUrl
     }
 }

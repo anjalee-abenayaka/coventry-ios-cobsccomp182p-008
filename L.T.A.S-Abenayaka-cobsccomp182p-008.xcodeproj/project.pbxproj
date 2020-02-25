@@ -12,6 +12,7 @@
 		3C09A03223FFBDF100C55AFA /* TouchFaceIdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C09A03123FFBDF100C55AFA /* TouchFaceIdViewController.swift */; };
 		3C09A03423FFBE0300C55AFA /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C09A03323FFBE0300C55AFA /* MyProfileViewController.swift */; };
 		3C09A03623FFC20A00C55AFA /* AlertMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C09A03523FFC20A00C55AFA /* AlertMessage.swift */; };
+		3C4B41E72405233B00231045 /* PostedEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4B41E62405233B00231045 /* PostedEventViewController.swift */; };
 		3C55583623FE4F61005530B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55583523FE4F61005530B2 /* AppDelegate.swift */; };
 		3C55583823FE4F61005530B2 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55583723FE4F61005530B2 /* LandingViewController.swift */; };
 		3C55583B23FE4F61005530B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C55583923FE4F61005530B2 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		3C09A03123FFBDF100C55AFA /* TouchFaceIdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchFaceIdViewController.swift; sourceTree = "<group>"; };
 		3C09A03323FFBE0300C55AFA /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		3C09A03523FFC20A00C55AFA /* AlertMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessage.swift; sourceTree = "<group>"; };
+		3C4B41E62405233B00231045 /* PostedEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedEventViewController.swift; sourceTree = "<group>"; };
 		3C55583223FE4F61005530B2 /* L.T.A.S-Abenayaka-cobsccomp182p-008.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "L.T.A.S-Abenayaka-cobsccomp182p-008.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C55583523FE4F61005530B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C55583723FE4F61005530B2 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				3C09A03123FFBDF100C55AFA /* TouchFaceIdViewController.swift */,
 				3C09A03323FFBE0300C55AFA /* MyProfileViewController.swift */,
 				3CFEDC042402995900C4E68B /* AddEventViewController.swift */,
+				3C4B41E62405233B00231045 /* PostedEventViewController.swift */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				3C09A03623FFC20A00C55AFA /* AlertMessage.swift in Sources */,
 				3C55587323FE79D5005530B2 /* EventHomeViewController.swift in Sources */,
 				3C55586723FE6A2D005530B2 /* SignUpViewController.swift in Sources */,
+				3C4B41E72405233B00231045 /* PostedEventViewController.swift in Sources */,
 				3C55583823FE4F61005530B2 /* LandingViewController.swift in Sources */,
 				3C55587123FE6B99005530B2 /* Constants.swift in Sources */,
 				3C55583623FE4F61005530B2 /* AppDelegate.swift in Sources */,

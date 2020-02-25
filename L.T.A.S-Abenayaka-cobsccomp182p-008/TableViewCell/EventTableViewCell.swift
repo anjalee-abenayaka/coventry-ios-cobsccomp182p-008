@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 class EventTableViewCell: UITableViewCell {
 
@@ -25,6 +26,19 @@ class EventTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func populateData(post: EventModel)  {
+        
+        lblEventTitle.text = post.event_title
+        lblDescription.text = post.description
+        lblSummery.text = post.summery
+        lblLocation.text = post.location
+        
+        let imgUrl = URL(string: post.imageUrl!)
+        
+        Nuke.loadImage(with: imgUrl!, into: imgEvent)
+        
     }
 
 }

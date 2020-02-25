@@ -9,7 +9,8 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
-import  Firebase
+import Firebase
+import SwiftyJSON
 
 class AddEventViewController: UIViewController{
     
@@ -23,64 +24,26 @@ class AddEventViewController: UIViewController{
     @IBOutlet weak var btnShare: UIButton!
     @IBOutlet weak var lblError: UILabel!
     
-    
+    var imagePicker:UIImagePickerController!
+    var ref = DatabaseReference.init()
+    var avatarImageUrl: String!
+    var firstname: String!
     
     var refEvents: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       setUpElements()
-       // FirebaseApp.configure()
-        refEvents = Database.database().reference().child("events");
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.delegate = self
+        
+        self.ref = Database.database().reference()
+        EventImage.isUserInteractionEnabled = true
+        setUpElements()
       
     }
     
-    
-    func addEvent(){
-        //generating a new key inside artists node
-        //and also getting the generated key
-        let error = validateFields()
-        let alert = AlertMessage()
-        
-        
-        if error != nil {
-            
-            // There's something wrong with the fields, show error message
-            showError(error!)
-        }
-        else {
-            // Create cleaned versions of the data
-            _ = txtEventTitle.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            _ = txtEventDesc.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            _ = txtEventSummary.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            _ = txtLocation.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            
-            self.btnShare.loadingIndicator(show: true)
-        let key = refEvents.childByAutoId().key
-        
-        //creating artist with the given values
-        let event = ["id":key,
-                      "event_title": txtEventTitle.text! as String,
-                      "description": txtEventDesc.text! as String,
-                      "summery": txtEventSummary.text! as String,
-                      "location": txtLocation.text! as String
-        ]
-        
-        //adding the artist inside the generated unique key
-        refEvents.child(key!).setValue(event)
-        alert.showAlert(title: "Event", message: "Event added successfully:",buttonText: "Event Home")
-            
-            let homeTabViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeTabViewController) as? HomeTabBarViewController
-            
-            self.view.window?.rootViewController = homeTabViewController
-            self.view.window?.makeKeyAndVisible()
-            
-            }
-            
-        }
-
-
-
     func setUpElements() {
         
         // Hide the error label
@@ -117,9 +80,79 @@ class AddEventViewController: UIViewController{
     }
     
 
+    @IBAction func btnUploadImage(_ sender: Any) {
+        self.present(imagePicker, animated: true, completion: nil)
+    }
     
     @IBAction func btnShareEvent(_ sender: Any) {
-       addEvent()
+      // addEvent()
+        let alert = AlertMessage()
+        if (txtEventTitle.text == "") {
+            alert.showAlert(title: "Event", message: "Title is required:",buttonText: "Add Event")
+            return
+        }
+        
+        if (txtEventDesc.text == ""){
+            alert.showAlert(title: "Event", message: "Title is required:",buttonText: "Add Event")
+            return
+        }
+        if (EventImage.image == nil){
+            alert.showAlert(title: "Event", message: "Event Image is required:",buttonText: "Add Event")
+            return
+        }
+        if (txtEventSummary.text == nil){
+            alert.showAlert(title: "Event", message: "Event Summery is required:",buttonText: "Add Event")
+            return
+        }
+        if (txtLocation.text == nil){
+            alert.showAlert(title: "Event", message: "Location is required:",buttonText: "Add Event")
+            return
+        }
+        self.saveFIRData()
+        navigationController?.popViewController(animated: true)
+        
+        alert.showAlert(title: "Event", message: "Event added successfully:",buttonText: "Event Home")
+        
+        let homeTabViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeTabViewController) as? HomeTabBarViewController
+        
+        self.view.window?.rootViewController = homeTabViewController
+        self.view.window?.makeKeyAndVisible()
+    }
+    
+    func saveFIRData(){
+        self.uploadMedia(image: EventImage.image!){ url in
+            self.saveImage(profileImageURL: url!){ success in
+                if (success != nil){
+                    self.dismiss(animated: true, completion: nil)
+                }
+                
+            }
+        }
+    }
+    
+    func uploadMedia(image :UIImage, completion: @escaping ((_ url: URL?) -> ())) {
+        let imageName = UUID().uuidString
+        let storageRef = Storage.storage().reference().child("events").child(imageName)
+        let imgData = self.EventImage.image?.pngData()
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/png"
+        storageRef.putData(imgData!, metadata: metaData) { (metadata, error) in
+            if error == nil{
+                storageRef.downloadURL(completion: { (url, error) in
+                    completion(url)
+                })
+            }else{
+                print("error in save image")
+                completion(nil)
+            }
+        }
+    }
+    
+    func saveImage(profileImageURL: URL , completion: @escaping ((_ url: URL?) -> ())){
+        let alert = AlertMessage()
+        let dict = ["description": txtEventDesc.text!, "imageUrl": profileImageURL.absoluteString,"event_title": txtEventTitle.text!,"summery": txtEventSummary.text!,"location": txtLocation.text!] as [String : Any]
+        self.ref.child("events").childByAutoId().setValue(dict)
+        alert.showAlert(title: "Event", message: "Event added successfully:",buttonText: "Event Home")
     }
     
 
@@ -130,4 +163,21 @@ func clearFields()  {
     
 }
 
+}
+extension AddEventViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let pickedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            self.EventImage.image = pickedImage
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }

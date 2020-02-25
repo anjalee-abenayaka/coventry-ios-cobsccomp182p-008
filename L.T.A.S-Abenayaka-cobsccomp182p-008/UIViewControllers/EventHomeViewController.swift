@@ -9,83 +9,97 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
-import  Firebase
+import Firebase
+import LocalAuthentication
 
-class EventHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class EventHomeViewController: UIViewController{
+    var eventList : [EventModel] = []
+    var ref: DatabaseReference!
+    var window: UIWindow?
    
 
     @IBOutlet weak var eventTableView: UITableView!
-    
-    var eventList = [EventModel]()
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return eventList.count
-        
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! EventTableViewCell
-        
-        //the artist object
-        let event: EventModel
-        
-        //getting the artist of selected position
-        event = eventList[indexPath.row]
-        
-        //adding values to labels
-        cell.lblEventTitle.text = event.event_title
-        cell.lblDescription.text = event.description
-        cell.lblSummery.text = event.summery
-        cell.lblLocation.text = event.location
-        
-        //returning cell
-        return cell
-    }
-    
     
     var refEvents: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       refEvents = Database.database().reference().child("events");
+        ref = Database.database().reference()
         
-        //observing the data changes
-        refEvents.observe(DataEventType.value, with: { (snapshot) in
-            
-            //if the reference have some values
-            if snapshot.childrenCount > 0 {
-                
-                //clearing the list
-                self.eventList.removeAll()
-                
-                //iterating through all the values
-                for events in snapshot.children.allObjects as! [DataSnapshot] {
-                    //getting values
-                    let eventObject = events.value as? [String: AnyObject]
-                    let event_title  = eventObject?["event_title"]
-                    let eventId  = eventObject?["id"]
-                    let description = eventObject?["description"]
-                    let summery = eventObject?["summery"]
-                    let location = eventObject?["location"]
-                    
-                    //creating artist object with model and fetched values
-                    let event = EventModel(id: eventId as! String?, event_title: event_title as! String?, description: description as! String?, summery: summery as! String?, location: location as! String?)
-                    
-                    //appending it to list
-                    self.eventList.append(event)
-                }
-                
-                //reloading the tableview
-                self.eventTableView.reloadData()
-            }
-        })
+        eventTableView.dataSource = self
+        eventTableView.delegate = self
+        getEventData()
+       
         
     }
     
-   
 
+    func getEventData(){
+         let eventsRef = ref.child("events")
+        
+        eventsRef.observe(.value){ snapshot in
+            for child in snapshot.children.allObjects as! [DataSnapshot] {
+                
+                let eventDic = child.value as! NSDictionary
+                
+                let event_title = eventDic["event_title"] as! String
+                let description = eventDic["description"] as! String
+                let location = eventDic["location"] as! String
+                let imageUrl = eventDic["imageUrl"] as! String
+                let summery = eventDic["summery"] as! String
+                let post = EventModel(
+                    event_title: event_title,
+                    description: description,
+                    summery: summery,
+                    location: location,
+                    
+                    imageUrl: imageUrl
+                )
+                
+                self.eventList.append(post)
+                
+                print(child)
+            }
+            
+            self.eventTableView.reloadData()
+            
+            
+        }
+        
+    }
 }
+
+extension EventHomeViewController: UITableViewDataSource, UITableViewDelegate{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return eventList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        
+        let eventCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! EventTableViewCell
+        
+        eventCell.selectionStyle = .none
+        
+        eventCell.populateData(post: eventList[indexPath.row])
+        
+        return eventCell
+    }
+   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        performSegue(withIdentifier: "eventDetail", sender: eventList[indexPath.row])
+    }
+    
+  /*  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "eventDetail" {
+            if let viewController = segue.destination as? PostedEventViewController{
+                
+                viewController.posts = sender as? EventModel
+            }
+        }
+    }*/
+}
+
