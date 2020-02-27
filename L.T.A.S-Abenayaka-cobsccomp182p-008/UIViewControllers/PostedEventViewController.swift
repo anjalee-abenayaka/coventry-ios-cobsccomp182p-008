@@ -10,49 +10,62 @@ import UIKit
 import Nuke
 import Firebase
 import LocalAuthentication
+import MapKit
 
 class PostedEventViewController: UIViewController {
 
     var posts: EventModel? = nil
     
-    @IBOutlet weak var LblEventTitle: UILabel!
-    @IBOutlet weak var ImageEvent: UIImageView!
-    @IBOutlet weak var txViewDescription: UITextView!
-    @IBOutlet weak var lblSummery: UILabel!
-    @IBOutlet weak var lblLocation: UILabel!
-    @IBOutlet weak var txtViewComment: UITextView!
-    @IBOutlet weak var btnSend: UIButton!
+  
+    @IBOutlet weak var EventTitleLbl: UILabel!
+    @IBOutlet weak var EventImage: UIImageView!
+    @IBOutlet weak var DescriptionTxtView: UITextView!
+    @IBOutlet weak var SummeryLbl: UILabel!
+    @IBOutlet weak var LocationLbl: UILabel!
+    @IBOutlet weak var CommentTxtView: UITextView!
+    @IBOutlet weak var SendBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
        // ImageEvent.layer.cornerRadius = ImageEvent.frame.width / 2
-     self.txtViewComment.layer.borderColor = UIColor.lightGray.cgColor
-     self.txtViewComment.layer.borderWidth = 1
+     self.CommentTxtView.layer.borderColor = UIColor.lightGray.cgColor
+     self.CommentTxtView.layer.borderWidth = 1
        // self.txtViewComment.text = " Comment Here .."
         
         if posts != nil{
             
             let url = URL(string: ((posts?.imageUrl)!))
             
-            Nuke.loadImage(with: url!, into: ImageEvent)
+            Nuke.loadImage(with: url!, into: EventImage)
             
-            LblEventTitle.text = posts?.event_title
-            txViewDescription.text = posts?.description
-            lblSummery.text = posts?.summery
-            lblLocation.text = posts?.location
+            EventTitleLbl.text = posts?.event_title
+            DescriptionTxtView.text = posts?.description
+            SummeryLbl.text = posts?.summery
+            LocationLbl.text = posts?.location
         }
         
     }
     
-
-    @IBAction func btnSignOut(_ sender: Any) {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
+    @IBAction func btnGooglemapDirection(_ sender: Any) {
+        let latitude:CLLocationDegrees = 6.906629
+        let logitutde:CLLocationDegrees = 79.870651
+        
+        let regionDistance:CLLocationDistance = 1000
+        let coordinates = CLLocationCoordinate2DMake(latitude,logitutde)
+        let regionSpan = MKCoordinateRegion(center: coordinates,latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+        let placemark = MKPlacemark(coordinate: coordinates)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "NIBM"
+        mapItem.openInMaps(launchOptions: options)
     }
     
-
+    @IBAction func btnHomeNav(_ sender: Any) {
+        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "HomeVC") as! HomeTabBarViewController
+        let navController = UINavigationController(rootViewController: VC1)
+        
+        self.present(navController, animated:true, completion: nil)
+    }
+    
 }

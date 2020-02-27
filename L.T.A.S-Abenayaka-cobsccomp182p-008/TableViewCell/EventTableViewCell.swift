@@ -16,7 +16,7 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var lblLocation: UILabel!
     @IBOutlet weak var lblSummery: UILabel!
-    
+    @IBOutlet weak var btnGoingUI: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,7 +27,7 @@ class EventTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+     
     func populateData(post: EventModel)  {
         
         lblEventTitle.text = post.event_title

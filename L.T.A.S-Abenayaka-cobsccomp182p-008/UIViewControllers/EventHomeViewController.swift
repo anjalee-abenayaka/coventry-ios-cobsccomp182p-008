@@ -20,6 +20,7 @@ class EventHomeViewController: UIViewController{
 
     @IBOutlet weak var eventTableView: UITableView!
     
+
     var refEvents: DatabaseReference!
     
     override func viewDidLoad() {
@@ -31,6 +32,28 @@ class EventHomeViewController: UIViewController{
         getEventData()
        
         
+    }
+    
+    @IBAction func btnSignOut(_ sender: Any) {
+        let alert = AlertMessage()
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        UserDefaults.standard.removeObject(forKey: "LoggedUser")
+        UserDefaults.standard.removeObject(forKey: "LoggedIn")
+        UserDefaults.standard.removeObject(forKey: "UserUID")
+        UserDefaults.standard.synchronize()
+        
+        alert.showAlert(title: "Signed out successfully", message: "You have been successfully Log Out", buttonText: "Okay")
+        
+        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+        let navController = UINavigationController(rootViewController: VC1)
+        
+        self.present(navController, animated:true, completion: nil)
+
     }
     
 

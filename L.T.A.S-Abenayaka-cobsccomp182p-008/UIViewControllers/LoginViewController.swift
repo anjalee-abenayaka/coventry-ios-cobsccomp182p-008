@@ -40,6 +40,13 @@ setUpElements()
         lblError.alpha = 1
     }
 
+    @IBAction func btnSignUpNavigation(_ sender: Any) {
+        
+        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "SignUpVC") as! SignUpViewController
+        let navController = UINavigationController(rootViewController: VC1)
+        
+        self.present(navController, animated:true, completion: nil)
+    }
     @IBAction func LoginTapped(_ sender: Any) {
         // Create cleaned versions of the text field
         let email = txtEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -54,11 +61,12 @@ setUpElements()
             }
             else {
                 
-              //  let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? EventHomeViewController
+                //  let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? EventHomeViewController
+                
                 let homeTabViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeTabViewController) as? HomeTabBarViewController
                 
                 self.view.window?.rootViewController = homeTabViewController
-               self.view.window?.makeKeyAndVisible()
+                self.view.window?.makeKeyAndVisible()
                 
             }
         }

@@ -11,6 +11,7 @@ import FirebaseFirestore
 import FirebaseAuth
 import Firebase
 import SwiftyJSON
+import MapKit
 
 class AddEventViewController: UIViewController{
     
@@ -23,6 +24,8 @@ class AddEventViewController: UIViewController{
     @IBOutlet weak var txtLocation: UITextField!
     @IBOutlet weak var btnShare: UIButton!
     @IBOutlet weak var lblError: UILabel!
+    @IBOutlet weak var btnUpload: UIButton!
+    @IBOutlet weak var btnLocation: UIButton!
     
     var imagePicker:UIImagePickerController!
     var ref = DatabaseReference.init()
@@ -57,6 +60,9 @@ class AddEventViewController: UIViewController{
         Utilities.styleTextField(txtEventDesc)
         Utilities.styleTextField(txtLocation)
         Utilities.styleTextField(txtEventSummary)
+       // Utilities.styleFilledButton(btnShare)
+       // Utilities.styleFilledButton(btnUpload)
+      //  Utilities.styleFilledButton(btnLocation)
     }
     
     func validateFields() -> String? {
@@ -87,6 +93,20 @@ class AddEventViewController: UIViewController{
         self.present(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func btnAddLocation(_ sender: Any) {
+        let latitude:CLLocationDegrees = 6.906629
+        let logitutde:CLLocationDegrees = 79.870651
+        
+        let regionDistance:CLLocationDistance = 1000
+        let coordinates = CLLocationCoordinate2DMake(latitude,logitutde)
+        let regionSpan = MKCoordinateRegion(center: coordinates,latitudinalMeters: regionDistance, longitudinalMeters: regionDistance)
+        
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)]
+        let placemark = MKPlacemark(coordinate: coordinates)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = "NIBM"
+        mapItem.openInMaps(launchOptions: options)
+    }
     @IBAction func btnShareEvent(_ sender: Any) {
       // addEvent()
         let alert = AlertMessage()
@@ -96,7 +116,7 @@ class AddEventViewController: UIViewController{
         }
         
         if (txtEventDesc.text == ""){
-            alert.showAlert(title: "Event", message: "Title is required:",buttonText: "Add Event")
+            alert.showAlert(title: "Event", message: "Description is required:",buttonText: "Add Event")
             return
         }
         if (EventImage.image == nil){
