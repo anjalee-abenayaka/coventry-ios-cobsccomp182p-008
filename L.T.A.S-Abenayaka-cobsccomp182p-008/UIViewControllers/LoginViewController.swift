@@ -49,28 +49,48 @@ setUpElements()
     }
     @IBAction func LoginTapped(_ sender: Any) {
         // Create cleaned versions of the text field
-        let email = txtEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        let password = txtPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let alert = AlertMessage()
+        _ = txtEmail.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        _ = txtPassword.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         // Signing in the user
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+        Auth.auth().signIn(withEmail: txtEmail.text!, password: txtPassword.text!) { [weak self] user, error in
+            guard self != nil else { return }
             
-            if error != nil {
-                // Couldn't sign in
-                self.showError("Please check your credentials")
-            }
-            else {
+            if (error != nil){
+                alert.showAlert(title:"Error in Login", message: error?.localizedDescription ?? "Error", buttonText: "Try Again")
+                return
+            }else{
+                var user_email:String?
+                var UID: String?
+                if let user = user {
+                    _ = user.user.displayName
+                    user_email = user.user.email
+                    UID = user.user.uid
+                    print("eeeeeeeeeee\(user_email!)")
+                }
                 
-                //  let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? EventHomeViewController
+                //self.showAlert(message: "SignIn Successfully! Email: \(user_email!)")
+                UserDefaults.standard.set(user_email, forKey: "LoggedUser")
+                UserDefaults.standard.set(UID, forKey: "UserUID")
+                UserDefaults.standard.set(true, forKey: "LoggedIn")
+                UserDefaults.standard.synchronize()
                 
-                let homeTabViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeTabViewController) as? HomeTabBarViewController
+                let homeTabViewController = self?.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeTabViewController) as? HomeTabBarViewController
                 
-                self.view.window?.rootViewController = homeTabViewController
-                self.view.window?.makeKeyAndVisible()
+                self?.view.window?.rootViewController = homeTabViewController
+                self?.view.window?.makeKeyAndVisible()
                 
             }
         }
-    }
+                
+                //  let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? EventHomeViewController
+                
+        
+                
+            }
+    
+
     
     @IBAction func ForgotPasswordTapped(_ sender: Any) {
         let forgotPassAlert = UIAlertController(title: "Forgot password?", message: "Enter email address", preferredStyle: .alert)

@@ -83,6 +83,10 @@ class TouchFaceIdViewController: UIViewController {
                     // 4
                     if success {
                         self.showAlertController("Touch ID Authentication Succeeded")
+                        let myProfieViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.myProfieViewController) as? MyProfileViewController
+                        
+                        self.view.window?.rootViewController = myProfieViewController
+                        self.view.window?.makeKeyAndVisible()
                     }
                     else {
                         self.showAlertController("Touch ID Authentication Failed")
