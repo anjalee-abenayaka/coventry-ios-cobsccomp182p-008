@@ -171,10 +171,10 @@ class AddEventViewController: UIViewController{
     }
     
     func saveImage(profileImageURL: URL , completion: @escaping ((_ url: URL?) -> ())){
-        let alert = AlertMessage()
+       // let alert = AlertMessage()
         let dict = ["description": txtEventDesc.text!, "imageUrl": profileImageURL.absoluteString,"event_title": txtEventTitle.text!,"summery": txtEventSummary.text!,"location": txtLocation.text!] as [String : Any]
         self.ref.child("events").childByAutoId().setValue(dict)
-        alert.showAlert(title: "Event", message: "Event added successfully:",buttonText: "Event Home")
+        //alert.showAlert(title: "Event", message: "Event added successfully:",buttonText: "Event Home")
     }
     
 
