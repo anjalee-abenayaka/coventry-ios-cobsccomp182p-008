@@ -27,8 +27,27 @@ class L_T_A_S_Abenayaka_cobsccomp182p_008UITests: XCTestCase {
     }
 
     func testExample() {
-        // Use recording to get started writing UI tests.
+                // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        let app = XCUIApplication()
+        let scrollViewsQuery = app.scrollViews
+        let elementsQuery = scrollViewsQuery.otherElements
+        let loginButton = elementsQuery.buttons["Login"]
+        loginButton.tap()
+        scrollViewsQuery.otherElements.containing(.image, identifier:"login").element.tap()
+        elementsQuery.textFields[" Your Email"].tap()
+        elementsQuery.secureTextFields[" Password"].tap()
+        loginButton.tap()
+        app.alerts["Error in Login"].buttons["Try Again"].tap()
+        elementsQuery.buttons["Forgot Password ?"].tap()
+        app.alerts["Forgot password?"].buttons["Cancel"].tap()
+        elementsQuery.staticTexts["Don't have an account ?"].tap()
+        elementsQuery.buttons["Sign Up "].tap()
+        elementsQuery.buttons["Login Here"].tap()
+    
+        
     }
 
 }

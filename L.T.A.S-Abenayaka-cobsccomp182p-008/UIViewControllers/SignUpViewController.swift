@@ -14,6 +14,8 @@ import FirebaseStorage
 
 class SignUpViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
 
+    @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var btnProfileImage: UIButton!
     @IBOutlet weak var imgProfilePicture: UIImageView!
     @IBOutlet weak var txtFname: UITextField!
     @IBOutlet weak var txtLname: UITextField!
@@ -168,12 +170,12 @@ class SignUpViewController: UIViewController,UIImagePickerControllerDelegate,UIN
     
     func uploadProfilePic(){
         
-        imgProfilePicture.layer.cornerRadius = 10
-        imgProfilePicture.clipsToBounds = true
+        profileImg.layer.cornerRadius = 10
+        profileImg.clipsToBounds = true
         
         let tapGuesture = UITapGestureRecognizer(target: self, action: #selector(SignUpViewController.handleSelectProfileImageView))
-        imgProfilePicture.addGestureRecognizer(tapGuesture)
-        imgProfilePicture.isUserInteractionEnabled = true
+        profileImg.addGestureRecognizer(tapGuesture)
+        profileImg.isUserInteractionEnabled = true
     }
     
     @objc func handleSelectProfileImageView(){
@@ -198,7 +200,7 @@ extension SignUpViewController{
             
             if let image = info[.originalImage] as? UIImage {
                 selectedImage = image
-                imgProfilePicture.image = image
+                profileImg.image = image
             }
             print(info)
             

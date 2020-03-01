@@ -21,5 +21,12 @@ class LandingViewController: UIViewController {
         Utilities.styleFilledButton(BtnLogin)
     }
 
+    
+    @IBAction func btnSkiptoHome(_ sender: Any) {
+        let bforeLoginEventHomeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.bforeLoginEventHomeViewController) as? BeforeLoginEventHomeViewController
+        
+        self.view.window?.rootViewController = bforeLoginEventHomeViewController
+        self.view.window?.makeKeyAndVisible()
+    }
 }
 

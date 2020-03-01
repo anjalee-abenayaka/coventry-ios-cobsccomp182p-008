@@ -28,6 +28,9 @@
 		3C55586F23FE6B74005530B2 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55586E23FE6B74005530B2 /* Utilities.swift */; };
 		3C55587123FE6B99005530B2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55587023FE6B99005530B2 /* Constants.swift */; };
 		3C55587323FE79D5005530B2 /* EventHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C55587223FE79D5005530B2 /* EventHomeViewController.swift */; };
+		3CFB07D9240B86530046C015 /* BeforeLoginEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB07D8240B86530046C015 /* BeforeLoginEventTableViewCell.swift */; };
+		3CFB07DB240B874F0046C015 /* BeforeLoginEventHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB07DA240B874F0046C015 /* BeforeLoginEventHomeViewController.swift */; };
+		3CFB07DD240B978A0046C015 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB07DC240B978A0046C015 /* CurrentUser.swift */; };
 		3CFEDC052402995900C4E68B /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFEDC042402995900C4E68B /* AddEventViewController.swift */; };
 		3CFEDC072402A49E00C4E68B /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFEDC062402A49E00C4E68B /* Indicator.swift */; };
 		3CFEDC0A2402C1BA00C4E68B /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFEDC092402C1BA00C4E68B /* EventTableViewCell.swift */; };
@@ -81,6 +84,9 @@
 		3C55586E23FE6B74005530B2 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3C55587023FE6B99005530B2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3C55587223FE79D5005530B2 /* EventHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHomeViewController.swift; sourceTree = "<group>"; };
+		3CFB07D8240B86530046C015 /* BeforeLoginEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeLoginEventTableViewCell.swift; sourceTree = "<group>"; };
+		3CFB07DA240B874F0046C015 /* BeforeLoginEventHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeLoginEventHomeViewController.swift; sourceTree = "<group>"; };
+		3CFB07DC240B978A0046C015 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		3CFEDC042402995900C4E68B /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		3CFEDC062402A49E00C4E68B /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
 		3CFEDC092402C1BA00C4E68B /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
@@ -192,6 +198,7 @@
 				3CFEDC042402995900C4E68B /* AddEventViewController.swift */,
 				3C4B41E62405233B00231045 /* PostedEventViewController.swift */,
 				3C0D8059240834E60078E75D /* MyProfileEditViewController.swift */,
+				3CFB07DA240B874F0046C015 /* BeforeLoginEventHomeViewController.swift */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -226,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				3CFEDC092402C1BA00C4E68B /* EventTableViewCell.swift */,
+				3CFB07D8240B86530046C015 /* BeforeLoginEventTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -234,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				3CFEDC0C2402C33100C4E68B /* EventModel.swift */,
+				3CFB07DC240B978A0046C015 /* CurrentUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -504,11 +513,14 @@
 				3CFEDC072402A49E00C4E68B /* Indicator.swift in Sources */,
 				3C09A03423FFBE0300C55AFA /* MyProfileViewController.swift in Sources */,
 				3CFEDC052402995900C4E68B /* AddEventViewController.swift in Sources */,
+				3CFB07DB240B874F0046C015 /* BeforeLoginEventHomeViewController.swift in Sources */,
+				3CFB07D9240B86530046C015 /* BeforeLoginEventTableViewCell.swift in Sources */,
 				3C09A03223FFBDF100C55AFA /* TouchFaceIdViewController.swift in Sources */,
 				3CFEDC0A2402C1BA00C4E68B /* EventTableViewCell.swift in Sources */,
 				3C55586F23FE6B74005530B2 /* Utilities.swift in Sources */,
 				3C55586923FE6A42005530B2 /* LoginViewController.swift in Sources */,
 				3C09A03623FFC20A00C55AFA /* AlertMessage.swift in Sources */,
+				3CFB07DD240B978A0046C015 /* CurrentUser.swift in Sources */,
 				3C55587323FE79D5005530B2 /* EventHomeViewController.swift in Sources */,
 				3C55586723FE6A2D005530B2 /* SignUpViewController.swift in Sources */,
 				3C4B41E72405233B00231045 /* PostedEventViewController.swift in Sources */,

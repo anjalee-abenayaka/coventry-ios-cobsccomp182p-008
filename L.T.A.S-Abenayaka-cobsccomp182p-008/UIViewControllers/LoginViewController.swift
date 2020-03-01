@@ -40,6 +40,12 @@ setUpElements()
         lblError.alpha = 1
     }
 
+    @IBAction func btnSkipToHome(_ sender: Any) {
+        let bforeLoginEventHomeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.bforeLoginEventHomeViewController) as? BeforeLoginEventHomeViewController
+        
+        self.view.window?.rootViewController = bforeLoginEventHomeViewController
+        self.view.window?.makeKeyAndVisible()
+    }
     @IBAction func btnSignUpNavigation(_ sender: Any) {
         
         let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "SignUpVC") as! SignUpViewController

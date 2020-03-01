@@ -16,6 +16,7 @@ struct Constants {
         static let homeTabViewController = "HomeVC"
         static let myProfieViewController = "ProfileVC"
         static let loginViewController = "LoginVC"
+        static let bforeLoginEventHomeViewController = "BeforeLogin"
         
     }
 }
