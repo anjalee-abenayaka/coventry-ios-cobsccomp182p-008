@@ -49,9 +49,9 @@ func handelFetchUserButtonTapped(){
     }
     
     @IBAction func NavBackToProfile(_ sender: Any) {
-        let myProfieViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.myProfieViewController) as? MyProfileViewController
+        let homeTabViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeTabViewController) as? HomeTabBarViewController
         
-        self.view.window?.rootViewController = myProfieViewController
+        self.view.window?.rootViewController = homeTabViewController
         self.view.window?.makeKeyAndVisible()
     }
     

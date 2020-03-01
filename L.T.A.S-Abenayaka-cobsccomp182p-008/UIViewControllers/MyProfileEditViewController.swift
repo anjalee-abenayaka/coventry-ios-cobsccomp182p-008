@@ -41,7 +41,28 @@ class MyProfileEditViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func btnSkip(_ sender: Any) {
+        let bforeLoginEventHomeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.bforeLoginEventHomeViewController) as? BeforeLoginEventHomeViewController
+        
+        self.view.window?.rootViewController = bforeLoginEventHomeViewController
+        self.view.window?.makeKeyAndVisible()
+    }
+    func setUpElements() {
+        
+        // Style the elements
+        Utilities.styleTextField(txtFName)
+        Utilities.styleTextField(txtMobile)
+        Utilities.styleTextField(txtLName)
+        Utilities.styleTextField(txtDepartmentName)
     
+    }
+    
+    @IBAction func btnBackToMyProfile(_ sender: Any) {
+        let myProfieViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.myProfieViewController) as? MyProfileViewController
+        
+        self.view.window?.rootViewController = myProfieViewController
+        self.view.window?.makeKeyAndVisible()
+    }
     @IBAction func btnUploadImage(_ sender: Any) {
         self.present(imagePicker, animated: true, completion: nil)
     }

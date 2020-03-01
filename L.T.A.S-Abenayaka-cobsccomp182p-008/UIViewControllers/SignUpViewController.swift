@@ -89,6 +89,12 @@ class SignUpViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         lblError.alpha = 1
     }
     
+    @IBAction func btnSkipToEventsHome(_ sender: Any) {
+        let bforeLoginEventHomeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.bforeLoginEventHomeViewController) as? BeforeLoginEventHomeViewController
+        
+        self.view.window?.rootViewController = bforeLoginEventHomeViewController
+        self.view.window?.makeKeyAndVisible()
+    }
     
     @IBAction func BtnSignUp(_ sender: Any) {
         // Validate the fields

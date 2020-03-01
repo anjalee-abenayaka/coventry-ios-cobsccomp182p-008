@@ -1,42 +1,38 @@
 //
-//  L_T_A_S_Abenayaka_cobsccomp182p_008Tests.swift
+//  UserRegistration.swift
 //  L.T.A.S-Abenayaka-cobsccomp182p-008Tests
 //
-//  Created by Anjalee on 2/20/20.
+//  Created by Anjalee on 3/1/20.
 //  Copyright © 2020 Anjalee Abenayaka. All rights reserved.
 //
 
 import XCTest
-@testable import L_T_A_S_Abenayaka_cobsccomp182p_008
+@testable import UserRegistration
 
-class L_T_A_S_Abenayaka_cobsccomp182p_008Tests: XCTestCase {
+class UserRegistrationTest: XCTestCase {
 
-    var sut: UserRegistrationModel!
+    var sut: UserRegistrationModelValidatorProtocol!
     let firstName = "Shanu"
     let lastName = "Kulathunga"
     let email = "shanu@gmail.com"
     let password = "12345678"
-    let confirmPassword = "12345678"
-    let departmentName = "IT"
-    let mobile = "0786655678"
+    let repeatPassword = "12345678"
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        sut = nil
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
-    
+
     func testUserModelStruc_canCreateNewInstance() {
         sut = UserRegistrationModel(firstName: firstName,
                                     lastName: lastName,
                                     email: email,
                                     password: password,
-                                    confirmPassword: confirmPassword,
-                                    departmentName: departmentName,
-                                    mobile: mobile)
+                                    repeatPassword: repeatPassword)
         
         XCTAssertNotNil(sut)
     }
@@ -46,9 +42,7 @@ class L_T_A_S_Abenayaka_cobsccomp182p_008Tests: XCTestCase {
                                     lastName: lastName,
                                     email: email,
                                     password: password,
-                                    confirmPassword: confirmPassword,
-                                    departmentName: departmentName,
-                                    mobile: mobile)
+                                    repeatPassword: repeatPassword)
         
         XCTAssertTrue(sut.isValidFirstName())
     }
@@ -58,9 +52,7 @@ class L_T_A_S_Abenayaka_cobsccomp182p_008Tests: XCTestCase {
                                     lastName: lastName,
                                     email: email,
                                     password: password,
-                                    confirmPassword: confirmPassword,
-                                    departmentName: departmentName,
-                                    mobile: mobile)
+                                    repeatPassword: repeatPassword)
         
         XCTAssertFalse(sut.isValidFirstName())
     }
@@ -70,9 +62,7 @@ class L_T_A_S_Abenayaka_cobsccomp182p_008Tests: XCTestCase {
                                     lastName: lastName,
                                     email: email,
                                     password: password,
-                                    confirmPassword: confirmPassword,
-                                    departmentName: departmentName,
-                                    mobile: mobile)
+                                    repeatPassword: repeatPassword)
         
         XCTAssertTrue(sut.isValidLastName())
     }
@@ -82,9 +72,7 @@ class L_T_A_S_Abenayaka_cobsccomp182p_008Tests: XCTestCase {
                                     lastName: "K",
                                     email: email,
                                     password: password,
-                                    confirmPassword: confirmPassword,
-                                    departmentName: departmentName,
-                                    mobile: mobile)
+                                    repeatPassword: repeatPassword)
         
         XCTAssertFalse(sut.isValidLastName())
     }
@@ -94,9 +82,7 @@ class L_T_A_S_Abenayaka_cobsccomp182p_008Tests: XCTestCase {
                                     lastName: lastName,
                                     email: email,
                                     password: password,
-                                    confirmPassword: confirmPassword,
-                                    departmentName: departmentName,
-                                    mobile: mobile)
+                                    repeatPassword: repeatPassword)
         
         XCTAssertTrue(sut.isValidEmail())
     }
@@ -105,11 +91,9 @@ class L_T_A_S_Abenayaka_cobsccomp182p_008Tests: XCTestCase {
         
         sut = UserRegistrationModel(firstName: firstName,
                                     lastName: lastName,
-                                    email: "gmail.com",
+                                    email: "test.com",
                                     password: password,
-                                    confirmPassword: confirmPassword,
-                                    departmentName: departmentName,
-                                    mobile: mobile)
+                                    repeatPassword: repeatPassword)
         
         XCTAssertFalse(sut.isValidEmail())
     }
@@ -119,9 +103,7 @@ class L_T_A_S_Abenayaka_cobsccomp182p_008Tests: XCTestCase {
                                     lastName: lastName,
                                     email: email,
                                     password: password,
-                                    confirmPassword: confirmPassword,
-                                    departmentName: departmentName,
-                                    mobile: mobile)
+                                    repeatPassword: repeatPassword)
         
         XCTAssertTrue(sut.isValidPasswordLength())
     }
@@ -131,9 +113,7 @@ class L_T_A_S_Abenayaka_cobsccomp182p_008Tests: XCTestCase {
                                     lastName: lastName,
                                     email: email,
                                     password: password,
-                                    confirmPassword: confirmPassword,
-                                    departmentName: departmentName,
-                                    mobile: mobile)
+                                    repeatPassword: repeatPassword)
         
         XCTAssertTrue(sut.doPasswordsMatch())
     }
@@ -143,34 +123,9 @@ class L_T_A_S_Abenayaka_cobsccomp182p_008Tests: XCTestCase {
                                     lastName: lastName,
                                     email: email,
                                     password: password,
-                                    confirmPassword: confirmPassword,
-                                    departmentName: departmentName,
-                                    mobile: mobile)
+                                    repeatPassword: repeatPassword)
         
         XCTAssertTrue(sut.isValidPassword())
-    }
-    
-    func testDepartName_shouldPassIfValidDepartmentName() {
-        sut = UserRegistrationModel(firstName: firstName,
-                                    lastName: lastName,
-                                    email: email,
-                                    password: password,
-                                    confirmPassword: confirmPassword,
-                                    departmentName: departmentName,
-                                    mobile: mobile)
-        
-        XCTAssertTrue(sut.isValidDepartment())
-    }
-    func testUserMobile_shouldPassIfValidMobile() {
-        sut = UserRegistrationModel(firstName: firstName,
-                                    lastName: lastName,
-                                    email: email,
-                                    password: password,
-                                    confirmPassword: confirmPassword,
-                                    departmentName: departmentName,
-                                    mobile: mobile)
-        
-        XCTAssertTrue(sut.isValidMobile())
     }
 
 

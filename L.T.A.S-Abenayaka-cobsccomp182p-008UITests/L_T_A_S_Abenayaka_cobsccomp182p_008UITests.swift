@@ -30,7 +30,7 @@ class L_T_A_S_Abenayaka_cobsccomp182p_008UITests: XCTestCase {
                 // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        
+     
         let app = XCUIApplication()
         let scrollViewsQuery = app.scrollViews
         let elementsQuery = scrollViewsQuery.otherElements

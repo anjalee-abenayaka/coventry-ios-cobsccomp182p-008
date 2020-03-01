@@ -31,6 +31,7 @@
 		3CFB07D9240B86530046C015 /* BeforeLoginEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB07D8240B86530046C015 /* BeforeLoginEventTableViewCell.swift */; };
 		3CFB07DB240B874F0046C015 /* BeforeLoginEventHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB07DA240B874F0046C015 /* BeforeLoginEventHomeViewController.swift */; };
 		3CFB07DD240B978A0046C015 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB07DC240B978A0046C015 /* CurrentUser.swift */; };
+		3CFB07E2240BF3810046C015 /* UserRegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB07E1240BF3810046C015 /* UserRegistrationModel.swift */; };
 		3CFEDC052402995900C4E68B /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFEDC042402995900C4E68B /* AddEventViewController.swift */; };
 		3CFEDC072402A49E00C4E68B /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFEDC062402A49E00C4E68B /* Indicator.swift */; };
 		3CFEDC0A2402C1BA00C4E68B /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFEDC092402C1BA00C4E68B /* EventTableViewCell.swift */; };
@@ -87,6 +88,7 @@
 		3CFB07D8240B86530046C015 /* BeforeLoginEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeLoginEventTableViewCell.swift; sourceTree = "<group>"; };
 		3CFB07DA240B874F0046C015 /* BeforeLoginEventHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeLoginEventHomeViewController.swift; sourceTree = "<group>"; };
 		3CFB07DC240B978A0046C015 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		3CFB07E1240BF3810046C015 /* UserRegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRegistrationModel.swift; sourceTree = "<group>"; };
 		3CFEDC042402995900C4E68B /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		3CFEDC062402A49E00C4E68B /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
 		3CFEDC092402C1BA00C4E68B /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				3C55584A23FE4F62005530B2 /* L_T_A_S_Abenayaka_cobsccomp182p_008Tests.swift */,
 				3C55584C23FE4F62005530B2 /* Info.plist */,
+				3CFB07E1240BF3810046C015 /* UserRegistrationModel.swift */,
 			);
 			path = "L.T.A.S-Abenayaka-cobsccomp182p-008Tests";
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C55584B23FE4F62005530B2 /* L_T_A_S_Abenayaka_cobsccomp182p_008Tests.swift in Sources */,
+				3CFB07E2240BF3810046C015 /* UserRegistrationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
