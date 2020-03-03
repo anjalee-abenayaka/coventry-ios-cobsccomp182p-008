@@ -943,9 +943,9 @@
                                                 </items>
                                             </navigationBar>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserProfile" translatesAutoresizingMaskIntoConstraints="NO" id="lYJ-uj-Rrf">
-                                                <rect key="frame" x="33" y="50" width="207" height="128"/>
+                                                <rect key="frame" x="33" y="50" width="157" height="128"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="207" id="FE0-As-KM6"/>
+                                                    <constraint firstAttribute="width" constant="157" id="FE0-As-KM6"/>
                                                     <constraint firstAttribute="height" constant="128" id="eZB-d4-vE1"/>
                                                 </constraints>
                                             </imageView>
@@ -999,7 +999,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65c-mo-EwP">
-                                                <rect key="frame" x="237" y="148" width="127" height="30"/>
+                                                <rect key="frame" x="219" y="148" width="145" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.44262491790000003" blue="0.75477871190000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="6Gk-M3-NIv"/>
@@ -1029,7 +1029,7 @@
                                             <constraint firstItem="zaZ-20-s58" firstAttribute="top" secondItem="Mmg-sU-Pqr" secondAttribute="bottom" constant="8" symbolic="YES" id="OD4-Ng-qKK"/>
                                             <constraint firstAttribute="trailing" secondItem="xtH-ba-OSV" secondAttribute="trailing" constant="124" id="OSo-7t-c6m"/>
                                             <constraint firstItem="xtH-ba-OSV" firstAttribute="top" secondItem="6gi-9X-u0l" secondAttribute="bottom" constant="30" id="PQj-jB-Mna"/>
-                                            <constraint firstItem="65c-mo-EwP" firstAttribute="leading" secondItem="lYJ-uj-Rrf" secondAttribute="trailing" constant="-3" id="QvV-G8-lPz"/>
+                                            <constraint firstItem="65c-mo-EwP" firstAttribute="leading" secondItem="lYJ-uj-Rrf" secondAttribute="trailing" constant="29" id="QvV-G8-lPz"/>
                                             <constraint firstItem="65c-mo-EwP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="lYJ-uj-Rrf" secondAttribute="trailing" constant="-3" id="RDn-QU-7FY"/>
                                             <constraint firstItem="lYJ-uj-Rrf" firstAttribute="top" secondItem="NjJ-S6-YEu" secondAttribute="bottom" constant="19" id="Rca-BU-14f"/>
                                             <constraint firstItem="65c-mo-EwP" firstAttribute="top" secondItem="hV1-cL-6cW" secondAttribute="top" constant="148" id="Sab-kM-DHw"/>
@@ -1634,6 +1634,6 @@
         <image name="user profile" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="w3H-c3-1Dh"/>
+        <segue reference="nOC-74-6fP"/>
     </inferredMetricsTieBreakers>
 </document>

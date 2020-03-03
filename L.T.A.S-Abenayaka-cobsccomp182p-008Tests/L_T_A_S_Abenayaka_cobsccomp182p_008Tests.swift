@@ -18,7 +18,7 @@ class L_T_A_S_Abenayaka_cobsccomp182p_008Tests: XCTestCase {
     let password = "12345678"
     let confirmPassword = "12345678"
     let departmentName = "IT"
-    let mobile = "0786655678"
+    let mobile = "0786655675"
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
